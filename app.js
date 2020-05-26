@@ -3,19 +3,19 @@ const navEl = document.querySelector("nav");
 const contentEl = document.querySelector(".content")
 const hamburgerBarsEl =  document.getElementsByTagName("span")
 
-function toggleNav() {
+
+function toggleNav () {
   navTriggerEl.addEventListener("click", function(){
     navEl.classList.toggle("open");
     contentEl.classList.toggle("shift");
-    animateHamburgers();
+    animateHamburger();
   })
 }
 
-function animateHamburgers() {
-  for (let item of hamburgerBarsEl) {
-    item.classList.toggle("change");
+function animateHamburger() {
+  for (let span of hamburgerBarsEl) {
+    span.classList.toggle("change")
   }
 }
-
 
 toggleNav();
